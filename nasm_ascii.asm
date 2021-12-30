@@ -13,8 +13,8 @@ _start:
 _loop:
     cmp rbx, 127 ; compare esi to 127 (max char in ascii)
     jae _exit ; >=
-    inc rbx ;increment esi, esi+1
     mov [_testt],rbx ; copie esi to _testt, [] -> ref to address _testt
+    inc rbx ;increment esi, esi+1
     call _print ;call print
     call _loop ; call loop 
  
