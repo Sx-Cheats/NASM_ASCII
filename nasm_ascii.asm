@@ -15,8 +15,8 @@ _loop:
     jae _exit ; >=
     mov [_testt],rbx ; copie esi to _testt, [] -> ref to address _testt
     inc rbx ;increment esi, esi+1
-    call _print ;call print
-    call _loop ; call loop 
+    call _print ;call _print
+    call _loop ; call _loop 
  
 _print:
     mov rdi, 1 ; output
