@@ -15,8 +15,8 @@ _loop:
     jae _exit ; >=
     mov [_testt],rbx ; copie esi to _testt, [] -> ref to address _testt
     inc rbx ;increment esi, esi+1
-    call _print ;call _print
-    call _loop ; call _loop 
+    jmp _print ;call _print
+   
  
 _print:
     mov rdi, 1 ; output
@@ -24,7 +24,7 @@ _print:
     mov rdx, 4 ; set size of char (_testt)
     mov rax, 1 ; call sys_write
     syscall  ;call kernel 
-    ret ; return instruction, return to the stack address of "_loop"
+    call _loop ; call _loop 
  
 _exit:
 mov	rax, 60 ;call sys_exit
