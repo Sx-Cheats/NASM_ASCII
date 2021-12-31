@@ -27,6 +27,6 @@ _print:
     call _loop ; call _loop 
  
 _exit:
-mov	rax, 60 ;call sys_exit
+mov rax, 60 ;call sys_exit
 mov rdi, 0 ; no output
 syscall  ; call kernel 
