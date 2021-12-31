@@ -11,7 +11,7 @@ _start:
     jmp _loop
 
 _loop:
-    cmp rbx, 127 ; compare esi to 127 (max char in ascii)
+    cmp rbx, 127 ; compare rbx to 127 (max char in ascii)
     jae _exit ; >=
     mov [_testt],rbx ; copie rbx to _testt, [] -> ref to address _testt
     inc rbx ;increment rbx, rbx+1
