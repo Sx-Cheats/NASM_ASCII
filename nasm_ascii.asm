@@ -17,7 +17,6 @@ _loop:
     inc rbx ;increment rbx, rbx+1
     jmp _print ;call _print
    
- 
 _print:
     mov rdi, 1 ; output
     mov rsi, _testt ;set const char* to rsi
